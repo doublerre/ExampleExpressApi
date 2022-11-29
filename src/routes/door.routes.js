@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { save } from '../controllers/Door'
+import { save, getDoors } from '../controllers/Door'
 
 const router = Router();
 
-router.get('/doors', save);
+router.post('/door', save);
+router.get('/doors', getDoors)
 
 export default router;
